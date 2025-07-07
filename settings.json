@@ -1,0 +1,35 @@
+{
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace", // Fuente Fira Code
+    "editor.fontLigatures": "'cv02', 'cv10', 'ss05', 'ss03', 'cv16', 'cv30', 'ss02', 'cv19', 'cv23'", // Ligaduras personalizadas para Fira Code
+    "editor.formatOnPaste": true, // Formatear automaticamente al pegar
+    "editor.formatOnSave": true, // Formatear automaticamente al guardar
+    "editor.inlayHints.enabled": "offUnlessPressed", // Los inlay hints se activan mediante Ctrl + Alt / Cmd + Opt
+    "editor.inlayHints.padding": true, // Espaciado alrededor de los inlay hints
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false, // Desactivar el minimapa
+    "editor.renderWhitespace": "all", // Mostrar siempre los espacios en blanco
+    "editor.rulers": [ // Añade una marca vertical para evitar lineas muy largas
+        100
+    ],
+    "editor.tabCompletion": "onlySnippets",
+    "editor.tabSize": 2, // 2 espacios por tabulación
+    "explorer.compactFolders": false, // No combinar carpetas
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "github.copilot.chat.agent.runTasks": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "html.completion.attributeDefaultValue": "singlequotes",
+    "javascript.format.semicolons": "insert", // Punto y coma automáticos para JavaScript
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "terminal.external.windowsExec": "wt", // Usar Windows Terminal como terminal externo
+    "typescript.format.semicolons": "insert", // Punto y coma automáticos para TypeScript
+    "window.restoreWindows": "none", // Al abrir VS Code, no restaura la sesión anterior
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.revealIfOpen": true, // Al abrir un archivo, muestra el que ya está abierto, en lugar de abrir una nueva pestaña
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none" // No muestra la pantalla de bienvenida al abrir VS Code
+}
