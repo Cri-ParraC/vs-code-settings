@@ -11,7 +11,7 @@
     "editor.rulers": [ // Añade una marca vertical para evitar lineas muy largas
         100
     ],
-    "editor.tabCompletion": "onlySnippets",
+    "editor.tabCompletion": "onlySnippets", // Evita autocompletar palabras
     "editor.tabSize": 2, // 2 espacios por tabulación
     "explorer.compactFolders": false, // No combinar carpetas
     "explorer.confirmDelete": false,
@@ -25,11 +25,41 @@
     "javascript.inlayHints.parameterTypes.enabled": true,
     "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
     "javascript.inlayHints.variableTypes.enabled": true,
-    "terminal.external.windowsExec": "wt", // Usar Windows Terminal como terminal externo
+    "terminal.external.windowsExec": "wt", // En Windows, usar Windows Terminal como terminal externo
+    "terminal.integrated.defaultProfile.osx": "zsh", // En macOS, usar Zsh como terminal integrado
     "typescript.format.semicolons": "insert", // Punto y coma automáticos para TypeScript
     "window.restoreWindows": "none", // Al abrir VS Code, no restaura la sesión anterior
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.revealIfOpen": true, // Al abrir un archivo, muestra el que ya está abierto, en lugar de abrir una nueva pestaña
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none" // No muestra la pantalla de bienvenida al abrir VS Code
+    "workbench.iconTheme": "material-icon-theme", // Tema de iconos Material Design
+    "workbench.startupEditor": "none", // No muestra la pantalla de bienvenida al abrir VS Code
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.formatOnType": true,
+    "workbench.colorCustomizations": {
+        "debugConsole.infoForeground": "#ffffff" // Color de texto en la consola de depuración
+    },
+    "debug.console.fontSize": 10, // Tamaño de texto en la consola de depuración
+    "github.copilot.chat.codeGeneration.instructions": [ // Instrucciones personalizadas para GitHub Copilot
+        {
+            "text": "Instrucción de texto" // Instrucciones en texto
+        },
+        {
+            "file": "instructions.md" // Instrucciones desde un archivo
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": false, // Muestra stashes en una seccion separada
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "fileHistory": false,
+        "repositories": true,
+        "searchAndCompare": false,
+        "launchpad": false
+    },
+    "chat.agent.enabled": false // Desactiva el modo "Agent" de GitHub Copilot
 }
