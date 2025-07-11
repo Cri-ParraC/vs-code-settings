@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.js,**/*.mjs'
+applyTo: "**/*.js,**/*.mjs"
 ---
 Utilizar *template literals* para interpolar cadenas, en lugar de concatenaciones:
 
@@ -96,17 +96,21 @@ if (value !== null || value !== undefined) {...}
 
 **UPPER_SNAKE_CASE** para constantes con valor primitivo inmutable.
 
-## Documentación JSDoc
-
-No es necesario dar una descripción de la función ni de cada parámetro.
-
 ## Formato de código
-
-No abreviar los nombres de variables.
 
 Punto y coma obligatorios.
 
-2 Espacios de indentación.
+2 espacios de indentación.
+
+No abreviar los nombres de variables. Es preferible tener nombres largos y semánticos, que cortos e ilegibles.
+
+```js
+// ✅ Correcto
+products.map((product) => product.value);
+
+// ❌ Incorrecto
+products.map((p) => p.value);
+```
 
 Para arreglos y objetos literales, se debe dejar *trailing comma*:
 
@@ -166,7 +170,7 @@ items.map((item) => item.value);
 items.map(item => item.value);
 ```
 
-Preferir `guard clauses` en lugar de anidaciones profundas.
+Preferir *guard clauses* en lugar de anidaciones profundas.
 
 ```js
 // ✅ Correcto
@@ -190,3 +194,79 @@ function processOrder(order) {
   return null;
 }
 ```
+
+En los métodos de `array` que utilizan *callbacks* (como filter, map, find), al realizar comparaciones, el parámetro del *callback* debe aparecer primero en la expresión de comparación.
+
+```js
+// ✅ Correcto
+users.find((user) => user.name === searchName);
+
+// ❌ Incorrecto
+users.find((user) => searchName === user.name);
+```
+
+Las variables booleanas deben nombrarse en positivo y usar prefijos como `is`, `has`, `can`, `should`.
+
+```js
+// ✅ Correcto
+const isActive = true;
+const hasPermission = checkPermissions();
+const shouldRedirect = status === 404;
+
+// ❌ Incorrecto
+const active = true;
+const permission = checkPermissions();
+const redirect = status === 404;
+```
+
+El operador ternario debe usarse solo para asignaciones simples con una única condición.
+
+```js
+// ✅ Correcto
+const status = isActive ? 'active' : 'inactive';
+
+// ✅ Correcto
+let message;
+if (isAdmin) {
+  message = userIsActive ? 'Admin active' : 'Admin inactive';
+} else {
+  message = isSpecialUser ? 'Special user' : 'Regular user';
+}
+
+// ❌ Incorrecto
+const message = isAdmin
+  ? userIsActive
+    ? 'Admin is active'
+    : 'Admin is inactive'
+  : isSpecialUser
+    ? 'Special user'
+    : 'Regular user';
+```
+
+En funciones que retornan estructuras de datos complejas, es preferible guardar el objeto en una variable antes de retornarlo, para mejorar la legibilidad y facilitar la depuración.
+
+```js
+// ✅ Correcto
+function getUser() {
+  const user = { 
+    name: 'John', 
+    age: 30,
+    permissions: ['read', 'write']
+  };
+  
+  return user;
+}
+
+// ❌ Incorrecto
+function getUser() {
+  return { 
+    name: 'John', 
+    age: 30,
+    permissions: ['read', 'write']
+  };
+}
+```
+
+## Documentación JSDoc
+
+No es necesario dar una descripción de la función ni de cada parámetro.
