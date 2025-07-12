@@ -1,8 +1,13 @@
 {
+    "chat.agent.enabled": false, // Desactiva el modo "Agent" de GitHub Copilot
+    "code-runner.runInTerminal": true, // [Code Runner] Ejecutar código en la terminal integrada
+    "debug.console.fontSize": 10, // Tamaño de texto en la consola de depuración
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace", // Fuente Fira Code
     "editor.fontLigatures": "'cv02', 'cv10', 'ss05', 'ss03', 'cv16', 'cv30', 'ss02', 'cv19', 'cv23'", // Ligaduras personalizadas para Fira Code
     "editor.formatOnPaste": true, // Formatear automaticamente al pegar
     "editor.formatOnSave": true, // Formatear automaticamente al guardar
+    "editor.formatOnType": true,
     "editor.inlayHints.enabled": "offUnlessPressed", // Los inlay hints se activan mediante Ctrl + Alt / Cmd + Opt
     "editor.inlayHints.padding": true, // Espaciado alrededor de los inlay hints
     "editor.linkedEditing": true,
@@ -16,29 +21,8 @@
     "explorer.compactFolders": false, // No combinar carpetas
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
     "github.copilot.chat.agent.runTasks": false,
-    "github.copilot.nextEditSuggestions.enabled": false,
-    "html.completion.attributeDefaultValue": "singlequotes",
-    "javascript.format.semicolons": "insert", // Punto y coma automáticos para JavaScript
-    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "javascript.inlayHints.parameterNames.enabled": "all",
-    "javascript.inlayHints.parameterTypes.enabled": true,
-    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "javascript.inlayHints.variableTypes.enabled": true,
-    "terminal.external.windowsExec": "wt", // En Windows, usar Windows Terminal como terminal externo
-    "terminal.integrated.defaultProfile.osx": "zsh", // En macOS, usar Zsh como terminal integrado
-    "typescript.format.semicolons": "insert", // Punto y coma automáticos para TypeScript
-    "window.restoreWindows": "none", // Al abrir VS Code, no restaura la sesión anterior
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.editor.revealIfOpen": true, // Al abrir un archivo, muestra el que ya está abierto, en lugar de abrir una nueva pestaña
-    "workbench.iconTheme": "material-icon-theme", // Tema de iconos Material Design
-    "workbench.startupEditor": "none", // No muestra la pantalla de bienvenida al abrir VS Code
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.formatOnType": true,
-    "workbench.colorCustomizations": {
-        "debugConsole.infoForeground": "#ffffff" // Color de texto en la consola de depuración
-    },
-    "debug.console.fontSize": 10, // Tamaño de texto en la consola de depuración
     "github.copilot.chat.codeGeneration.instructions": [ // Instrucciones personalizadas para GitHub Copilot
         {
             "text": "Instrucción de texto" // Instrucciones en texto
@@ -47,19 +31,38 @@
             "file": "instructions.md" // Instrucciones desde un archivo
         }
     ],
-    "diffEditor.ignoreTrimWhitespace": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
     "gitlens.views.scm.grouped.views": {
-        "commits": true,
         "branches": true,
-        "remotes": true,
-        "stashes": false, // Muestra stashes en una seccion separada
-        "tags": true,
-        "worktrees": true,
+        "commits": true,
         "contributors": true,
         "fileHistory": false,
+        "launchpad": false,
+        "remotes": true,
         "repositories": true,
         "searchAndCompare": false,
-        "launchpad": false
+        "stashes": false, // Muestra stashes en una seccion separada
+        "tags": true,
+        "worktrees": true
     },
-    "chat.agent.enabled": false // Desactiva el modo "Agent" de GitHub Copilot
+    "javascript.format.semicolons": "insert", // Punto y coma automáticos para JavaScript
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.windowsExec": "wt", // En Windows, usar Windows Terminal como terminal externo
+    "terminal.integrated.defaultProfile.osx": "zsh", // En macOS, usar Zsh como terminal integrado
+    "typescript.format.semicolons": "insert", // Punto y coma automáticos para TypeScript
+    "update.showReleaseNotes": false,
+    "window.restoreWindows": "none", // Al abrir VS Code, no restaura la sesión anterior
+    "workbench.colorCustomizations": {
+        "debugConsole.infoForeground": "#ffffff", // Color de texto en la consola de depuración
+        "debugTokenExpression.name": "#4FC1FF"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.revealIfOpen": true, // Al abrir un archivo, muestra el que ya está abierto, en lugar de abrir una nueva pestaña
+    "workbench.iconTheme": "material-icon-theme", // Tema de iconos Material Design
+    "workbench.startupEditor": "none" // No muestra la pantalla de bienvenida al abrir VS Code
 }
